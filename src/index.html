@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>rabbitWerks | Infinite-Looper</title>
+  <style>
+    /* Adjust based on image size */
+    #inf-loop-wrapper {
+      width: 800px;
+      height: 600px;
+      margin: 5% auto;
+    }
+    /* position absolute without top right bottom left props to stack on top of eachother in the same spot */
+    #inf-loop-wrapper img {
+      position: absolute;
+      transition: all 0.5s; /* <-- adjust fade time */
+    }
+    .iL-img {
+      opacity: 0; /* <-- initally set for 0 opacity */
+    }
+    .iL-visible {
+      opacity: 1; /* <-- set opacity to 1 for current image */
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="inf-loop-wrapper">
+
+    <img src="img/stock-image-1.jpg" alt="image1" class="iL-img iL-visible">
+
+    <img src="img/stock-image-2.jpg" alt="image2" class="iL-img">
+
+    <img src="img/stock-image-3.jpg" alt="image3" class="iL-img">
+
+    <img src="img/stock-image-4.jpg" alt="image4" class="iL-img">
+
+
+  </div>
+
+  <script src="js/infinite-looper.js"></script>
+</body>
+</html>
